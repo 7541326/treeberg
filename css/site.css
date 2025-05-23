@@ -1,0 +1,20 @@
+html{
+    background-color: rgb(115, 186, 221)
+}
+
+#treeberg{
+    display:block;
+    margin:auto;
+    margin-top: 5%;
+    width: 500px;
+}
+
+
+#hell-hole-map{
+    margin-top: 30%;
+    position: relative;
+    font-size: 24px;
+    padding: 20px;
+    transition: left 0.1s ease-out;
+}
+
