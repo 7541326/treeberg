@@ -18,3 +18,70 @@ html{
     transition: left 0.1s ease-out;
 }
 
+#treecontainer {
+    display: none;
+    background-image: url("../imgs/placeholder-tree.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slugstick {
+    display: none;
+    position: sticky;
+    bottom: 40%;
+    text-align: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.slugstick>img {
+    width: 150px;
+}
+
+.tier {
+    display: grid;
+    grid-template-rows: repeat(50, 50px);
+    grid-template-columns: repeat(8,1fr);
+    position: relative;
+}
+
+.infowrapper {
+    display: none;
+    background-color: white;
+    overflow: auto;
+}
+
+.infowrapper:hover {
+    border: solid 2px red;
+}
+
+.infounwrap {
+    display: none;
+}
+
+/* grid placement stuff */
+/* make sure to put any new css ABOVE this just so all this stuff is at the bottom */
+
+#t1i1 {
+    grid-row: 10 / span 2;
+    grid-column: 4 / span 1;
+}
+
+#t1i2 {
+    grid-row: 16 / span 2;
+    grid-column: 6 / span 1;
+}
+
+#t1i3 {
+    grid-row: 23 / span 2;
+    grid-column: 3 / span 1;
+}
+
+#t1i4 {
+    grid-row: 29 / span 2;
+    grid-column: 7 / span 1;
+}
+
+#t1i5 {
+    grid-row: 36 / span 2;
+    grid-column: 2 / span 1;
+}

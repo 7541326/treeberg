@@ -13,22 +13,83 @@
 	<link rel="stylesheet" type="text/css" href="./css/site.css">
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/script.js" DEFER></script>
 </head>
 <body>
 	<main id="content">
-		<section>
+
+		<div id="abovetree">
 			<h1>UCSC Treeberg</h1>
 			<div id="iceberg">
+				<p>*Note: all the images on this site right now are placeholders</p>
 				<img id ="treeberg" src="imgs/an-updated-ucsc-iceberg-v0-emwyiyr1g44e1.webp">
-				<button id="button"> Click here for details! </button>
+				<p>Maybe for more Javascript interactivity we can have a short Javascript animation or some other thing to transition to the tree, so JS is being used for more things like needed for the assignment:</p>
+				<button id="expandtree"> Click here for details! </button>
+				<p>Maybe like a little info quiz like How much do you know about UCSC? and then have another one at the end after scrolling thru</p>
+				<p>JS Libraries I found that I think are neat, just putting them here for me:</p>
+				<ul>
+					<li>https://github.com/WeiChiaChang/easter-egg-collection</li>
+					<li>https://github.com/tholman/elevator.js?files=1</li>
+					<li>https://github.com/mrdoob/three.js?tab=readme-ov-file</li>
+					<li>https://github.com/VincentGarreau/particles.js?tab=readme-ov-file</li>
+					<li>https://github.com/maxwellito/vivus?tab=readme-ov-file - This one can be used for animating icons</li>
+					<li>https://github.com/janpaepke/ScrollMagic?tab=readme-ov-file - this one can be used to make the scrolling better & funner</li>
+				</ul>
+			</div>
 		</div>
+		<div id="treecontainer">
+			<div class="tier">
+				<div id="t1i1" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						more info or something, idk
+					</div>
+				</div>
 
+				<div id="t1i2" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						more info or something, idk
+					</div>
+				</div>
+
+				<div id="t1i3" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						more info or something, idk
+					</div>
+				</div>
+
+				<div id="t1i4" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						more info or something, idk
+					</div>
+				</div>
+
+				<div id="t1i5" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						more info or something, idk
+					</div>
+				</div>
+			</div>
+
+			<div class="slugstick">
+				<img src="./imgs/sluggy.png">
+			</div>
+
+		</div>
+		<div id="belowtree">
 			<img id="hell-hole-map" src="imgs/hell-hole-cave-map.webp">
-
-		</section>
+		</div>
 
 	</main>
 </body>
