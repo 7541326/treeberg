@@ -58,6 +58,24 @@ html{
     display: none;
 }
 
+/* quiz stuff */
+
+#quiz {
+    display: none;
+}
+
+#quizSubmit {
+    display: none;
+}
+
+#quizResults {
+    display: none;
+}
+
+#quizExit {
+    display: none;
+}
+
 /* grid placement stuff */
 /* make sure to put any new css ABOVE this just so all this stuff is at the bottom */
 
