@@ -40,6 +40,7 @@ let score = 0;
 
 
 // functions
+// quiz function sort of adapted from https://code-boxx.com/simple-javascript-quiz/ 
 function quizStart(num) {
     // prints currentQ of quizQs to relevant divs
     $("#quizQ").html(`${quizQs[num].question}`);
