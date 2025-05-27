@@ -100,7 +100,6 @@ $("#quizExit").click(function(){
     $tierItems.delay(1500).fadeIn(1000);
 })
 
-
 // show or hide info when clicking tier item
 $tierItems.click(function(){
     if ($(this).children(".infounwrap").css("display") == "none") {
