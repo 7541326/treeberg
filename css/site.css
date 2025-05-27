@@ -14,15 +14,18 @@ html{
     margin-top: 30%;
     position: relative;
     font-size: 24px;
-    padding: 20px;
+    padding: 10px;
     transition: left 0.1s ease-out;
 }
 
 #treecontainer {
+    max-width: 100%;
+    max-height: 100%;
     display: none;
     background-image: url("../imgs/placeholder-tree.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .slugstick {
@@ -39,7 +42,7 @@ html{
 
 .tier {
     display: grid;
-    grid-template-rows: repeat(50, 50px);
+    grid-template-rows: repeat(37, 100px);
     grid-template-columns: repeat(8,1fr);
     position: relative;
 }
