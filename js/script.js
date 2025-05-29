@@ -5,12 +5,12 @@
 const $tierItems = $(".infowrapper")
 const quizQs = [
   {
-    question: "Example Question one?",
+    question: "What is the official mascot of UC Santa Cruz?",
     answers: [
-        "Answer1",
-        "Answer2",
-        "Answer3",
-        "Answer4"
+        "Sea Otter",
+        "Banana Slug",
+        "Grizly Bear",
+        "Frog"
     ],
     correct: 2
   },
@@ -27,10 +27,10 @@ const quizQs = [
   {
     question: "hat is the theme for Cowell College?",
     answers: [
-        "Answer1",
+        "Communicating Diversity for a just Society",
         "The Pursuit of Truth in the Company of Friends",
-        "Answer3",
-        "Answer4"
+        "Power and Representation",
+        "How am I suposed to know? "
     ],
     correct: 2
   },
