@@ -25,10 +25,10 @@ const quizQs = [
     correct: 2
   },
   {
-    question: "Example Question three?",
+    question: "hat is the theme for Cowell College?",
     answers: [
         "Answer1",
-        "Answer2",
+        "The Pursuit of Truth in the Company of Friends",
         "Answer3",
         "Answer4"
     ],
