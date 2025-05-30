@@ -32,7 +32,7 @@ const quizQs = [
         "Power and Representation",
         "How am I suposed to know? "
     ],
-    correct: The Pursuit of Truth in the Company of Friends
+    correct: 2
   },
 ]
 let currentQ = 0;
