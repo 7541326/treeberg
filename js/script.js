@@ -15,7 +15,7 @@ const quizQs = [
     correct: 2
   },
   {
-    question: "Example Question two?",
+    question: "What is the name of the hidden art installation located in the woods between Porter and Kresge Colleges?",
     answers: [
         "Answer1",
         "Answer2",
@@ -32,7 +32,7 @@ const quizQs = [
         "Power and Representation",
         "How am I suposed to know? "
     ],
-    correct: 2
+    correct: The Pursuit of Truth in the Company of Friends
   },
 ]
 let currentQ = 0;
