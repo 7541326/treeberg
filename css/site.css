@@ -115,6 +115,7 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background: 50%;
 }
 
 .hero-text {

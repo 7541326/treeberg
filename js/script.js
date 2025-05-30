@@ -83,7 +83,7 @@ function quizNext() {
 }
 
 // buttons
-$("#expandtree").click(function(){
+$("#bannerStart").click(function(){
     console.log("clicked");
     $("#abovetree").slideUp();
     $("#quiz").delay(1000).slideDown();
