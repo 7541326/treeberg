@@ -12,12 +12,12 @@ const quizQs = [
         "Grizly Bear",
         "Frog"
     ],
-    correct: 2
+    correct: 1 // Fixed index
   },
   {
     question: "Which Cafe can you get a free meal?",
     answers: [
-        "Oaks Cafe ",
+        "Oaks Cafe",
         "Cowell Cafe",
         "Global Village Cafe",
         "Stevenson Cafe"
@@ -30,50 +30,44 @@ const quizQs = [
         "Communicating Diversity for a just Society",
         "The Pursuit of Truth in the Company of Friends",
         "Power and Representation",
-        "How am I suposed to know? "
+        "How am I supposed to know?"
     ],
-    correct: 2
+    correct: 1 // Fixed index
   },
 ]
 let currentQ = 0;
 let score = 0;
 
-
 // functions
-// quiz function sort of adapted from https://code-boxx.com/simple-javascript-quiz/ 
 function quizStart(num) {
     // prints currentQ of quizQs to relevant divs
     $("#quizQ").html(`${quizQs[num].question}`);
     $("#quizA").html(``);
-    for (i in quizQs[num].answers) {
+    for (let i in quizQs[num].answers) {
         $("#quizA").append(`
             <input type="radio" name="quiz" value="${i}" id="quizA${i}">
-            <label for="quizA${i}">${quizQs[num].answers[i]}</label>
-            `);}
-    $("#quizSubmit").css("display", "block")
-    
+            <label for="quizA${i}">${quizQs[num].answers[i]}</label><br>
+        `);
+    }
+    $("#quizSubmit").css("display", "block");
 }
 
 function quizCheck(num) {
-    // gets value of selected radio button, checks against correct answer
     let selectedA = $('input[name="quiz"]:checked').val();
     console.log(selectedA);
-    if (selectedA == quizQs[num].correct){
-        score ++;
-    };
+    if (selectedA == quizQs[num].correct) {
+        score++;
+    }
 }
 
 function quizNext() {
     console.log("clicked")
-    // if still questions, go to next question, or else close quiz and show results
-    if (currentQ < quizQs.length-1) {
+    if (currentQ < quizQs.length - 1) {
         currentQ++;
         quizStart(currentQ);
-        // function to check answer, add to score
     } else {
-        $("#quizResults").html(`
-            Your score is: ${score}`)
-        console.log("slided")
+        $("#quizResults").html(`Your score is: ${score}`);
+        console.log("slided");
         $("#quizQ").slideUp();
         $("#quizA").slideUp();
         $("#quizSubmit").slideUp();
@@ -83,25 +77,31 @@ function quizNext() {
 }
 
 // buttons
-$("#expandtree").click(function(){
+$("#bannerStart").click(function () {
     console.log("clicked");
     $("#abovetree").slideUp();
     $("#quiz").delay(1000).slideDown();
     quizStart(currentQ);
 });
-$("#quizSubmit").click(function(){
+
+$("#quizSubmit").click(function () {
+    if (!$('input[name="quiz"]:checked').val()) {
+        alert("Please select an answer!");
+        return;
+    }
     quizCheck(currentQ);
     quizNext();
-})
-$("#quizExit").click(function(){
+});
+
+$("#quizExit").click(function () {
     $("#quiz").slideUp(1000);
     $("#treecontainer").slideDown(1000);
     $(".slugstick").delay(1000).slideDown(1000);
     $tierItems.delay(1500).fadeIn(1000);
-})
+});
 
 // show or hide info when clicking tier item
-$tierItems.click(function(){
+$tierItems.click(function () {
     if ($(this).children(".infounwrap").css("display") == "none") {
         $(this).children(".infounwrap").slideDown();
     } else {
