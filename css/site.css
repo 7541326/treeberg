@@ -1,6 +1,9 @@
-html{
-    background-color: rgb(115, 186, 221)
+* {
+    cursor: url("../imgs/Cursor_Image_.png") 5 0, default;
+}
 
+html{
+    background-color: rgb(115, 186, 221);
 }
 
 #treeberg{
