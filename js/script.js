@@ -80,8 +80,13 @@ function quizNext() {
 $("#bannerStart").click(function () {
     console.log("clicked");
     $("#abovetree").slideUp();
-    $("#quiz").delay(1000).slideDown();
-    quizStart(currentQ);
+    // $("#quiz").delay(1000).slideDown();
+    // quizStart(currentQ);
+    
+    $("#treecontainer").slideDown(1000);
+    $(".slugstick").delay(1000).slideDown(1000);
+    $tierItems.delay(1500).fadeIn(1000);
+
 });
 
 $("#quizSubmit").click(function () {
