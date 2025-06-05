@@ -15,17 +15,17 @@ const quizQs = [
     correct: 2
   },
   {
-    question: "What is the name of the hidden art installation located in the woods between Porter and Kresge Colleges?",
+    question: "Which Cafe can you get a free meal?",
     answers: [
-        "Answer1",
-        "Answer2",
-        "Answer3",
-        "Answer4"
+        "Oaks Cafe ",
+        "Cowell Cafe",
+        "Global Village Cafe",
+        "Stevenson Cafe"
     ],
     correct: 2
   },
   {
-    question: "hat is the theme for Cowell College?",
+    question: "What is the theme for Cowell College?",
     answers: [
         "Communicating Diversity for a just Society",
         "The Pursuit of Truth in the Company of Friends",
