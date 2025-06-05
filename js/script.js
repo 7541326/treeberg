@@ -17,7 +17,7 @@ const quizQs = [
   {
     question: "Which Cafe can you get a free meal?",
     answers: [
-        "Oaks Cafe",
+        "Oakes Cafe",
         "Cowell Cafe",
         "Global Village Cafe",
         "Stevenson Cafe"
