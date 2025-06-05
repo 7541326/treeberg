@@ -2,6 +2,7 @@
     height:1000px;
 }
 
+/* https://scrollmagic.io/examples/basic/reveal_on_scroll.html */
 .infowrapper {
     padding-top:50px;
     padding-bottom:50px;
@@ -16,34 +17,12 @@
 				-ms-transition: all 0.6s ease-out;
 				 -o-transition: all 0.6s ease-out;
 						transition: all 0.6s ease-out;
-	}
-	.infowrapper.visible {
-		opacity: 1;
+}
+.infowrapper.visible {
+	opacity: 1;
 		-webkit-transform: none;
 			 -moz-transform: none;
 				-ms-transform: none;
 				 -o-transform: none;
 						transform: none;
-	}
-
-/* #t1i1, #t1i2, #t1i3, #t1i4, #t1i5 {
-		opacity: 0;
-		-webkit-transform: rotate(40deg) scale(0.5);
-			 -moz-transform: rotate(40deg) scale(0.5);
-				-ms-transform: rotate(40deg) scale(0.5);
-				 -o-transform: rotate(40deg) scale(0.5);
-						transform: rotate(40deg) scale(0.5);
-		-webkit-transition: all 0.8s ease-in-out;
-			 -moz-transition: all 0.8s ease-in-out;
-				-ms-transition: all 0.8s ease-in-out;
-				 -o-transition: all 0.8s ease-in-out;
-						transition: all 0.8s ease-in-out;
 }
-#t1i1.visible, #t1i2.visible, #t1i3.visible, #t1i4.visible, #t1i5.visible {
-	opacity: 1;
-	-webkit-transform: none;
-		 -moz-transform: none;
-			-ms-transform: none;
-			 -o-transform: none;
-					transform: none;
-} */
