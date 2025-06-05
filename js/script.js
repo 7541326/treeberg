@@ -12,7 +12,7 @@ const quizQs = [
         "Grizly Bear",
         "Frog"
     ],
-    correct: 1 // Fixed index
+    correct: 2 // Fixed index
   },
   {
     question: "Which Cafe can you get a free meal?",
@@ -32,7 +32,7 @@ const quizQs = [
         "Power and Representation",
         "How am I supposed to know?"
     ],
-    correct: 1 // Fixed index
+    correct: 2 // Fixed index
   },
 ]
 let currentQ = 0;
@@ -108,4 +108,3 @@ $tierItems.click(function () {
         $(this).children(".infounwrap").slideUp();
     }
 });
-
