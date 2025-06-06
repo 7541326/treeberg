@@ -46,10 +46,10 @@ function quizStart(num) {
     for (let i in quizQs[num].answers) {
         $("#quizA").append(`
             <input type="radio" name="quiz" value="${i}" id="quizA${i}">
-            <label for="quizA${i}">${quizQs[num].answers[i]}</label><br>
+            <label for="quizA${i}" class="quizALabel"><p>${quizQs[num].answers[i]}</p></label>
         `);
     }
-    $("#quizSubmit").css("display", "block");
+    $("#quizSubmit").css("display", "inline");
 }
 
 function quizCheck(num) {
@@ -80,12 +80,9 @@ function quizNext() {
 $("#bannerStart").click(function () {
     console.log("clicked");
     $("#abovetree").slideUp();
-    // $("#quiz").delay(1000).slideDown();
-    // quizStart(currentQ);
+    $("#quiz").delay(1000).slideDown();
+    quizStart(currentQ);
     
-    $("#treecontainer").slideDown(1000);
-    $(".slugstick").delay(1000).slideDown(1000);
-    $tierItems.delay(1500).fadeIn(1000);
 
 });
 
@@ -112,4 +109,9 @@ $tierItems.click(function () {
     } else {
         $(this).children(".infounwrap").slideUp();
     }
+});
+
+// particles
+particlesJS.load('particles-js', '../particle/js/particles.json', function() {
+  console.log('callback - particles.js config loaded');
 });

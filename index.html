@@ -24,7 +24,7 @@
 
 		<div id="abovetree">
 		<div class="hero-image">
-			<img src="imgs/campus-aerial-view.jpg">
+			<img src="imgs/campus-aerial-view.jpg" id="headerimg">
 			<div class="hero-text">
 				<h1>UCSC Treeberg</h1>
 				<p>Welcome to a deep dive to the campus</p>
@@ -34,19 +34,12 @@
 			<div id="iceberg">
 				<img id ="treeberg" src="imgs/an-updated-ucsc-iceberg-v0-emwyiyr1g44e1.webp">
 				<p> Here is the reddit link to where we took this image from. </p>
-					<li> https://www.reddit.com/r/UCSC/comments/1h3p4v6/an_updated_ucsc_iceberg/ </li>
-				<p>Maybe for more Javascript interactivity we can have a short Javascript animation or some other thing to transition to the tree, so JS is being used for more things like needed for the assignment</p>
-				<p>Maybe like a little info quiz like How much do you know about UCSC? and then have another one at the end after scrolling thru, and you can compare your scores before & after. We don't have to do this, but I'm putting one on here for the prototype :p</p>
-				<p>JS Libraries I found that I think are neat, just putting them here for me:</p>
 				<ul>
-					<li>https://github.com/WeiChiaChang/easter-egg-collection</li>
-					<li>https://github.com/tholman/elevator.js?files=1</li>
-					<li>https://github.com/mrdoob/three.js?tab=readme-ov-file</li>
-					<li>https://github.com/VincentGarreau/particles.js?tab=readme-ov-file</li>
-					<li>https://github.com/maxwellito/vivus?tab=readme-ov-file - This one can be used for animating icons</li>
-					<li>https://github.com/janpaepke/ScrollMagic?tab=readme-ov-file - this one can be used to make the scrolling better & funner</li>
+					<li> https://www.reddit.com/r/UCSC/comments/1h3p4v6/an_updated_ucsc_iceberg/ </li>
 				</ul>
+					
 				<button id="expandtree"> Click here for details! </button>
+				</div>
 			</div>
 		</div>
 		
@@ -59,28 +52,44 @@
 		</div>
 		
 		<div id="treecontainer">
-			<div class="tier">
+			<div id="tier1">
 				<div id="t1i1" class="infowrapper">
 					<img src="./imgs/placeholder-01.png">
-					HAY
+					10 Residential Colleges
 					<div class="infounwrap">
-						more info or something, idk
+						<div class="infounwrapcontent">
+							<p>-Cowell (1965)
+								-Stevenson (1966)
+								-Crown (1967)
+								-Merrill (1968)
+								-Porter (1969)
+								-Kresge (1971)
+								-Oakes (1972)
+								-Rachel Carson (1972)
+								-College Nine (2000)
+								-John R. Lewis (2002)
+							</p>
+						</div>
 					</div>
 				</div>
 
 				<div id="t1i2" class="infowrapper">
 					<img src="./imgs/placeholder-01.png">
-					HAY
+					Mid dining hall food
 					<div class="infounwrap">
-						more info or something, idk
+						<div class="infounwrapcontent">
+							<p>Food rotates every day of the week. Some food is good and some completely sucks. It also depends on which dining hall you go to eat at. Compared to other UCs though, our food is mediocre.</p>
+						</div>	
 					</div>
 				</div>
 
 				<div id="t1i3" class="infowrapper">
 					<img src="./imgs/placeholder-01.png">
-					HAY
+					Wildlife
 					<div class="infounwrap">
-						more info or something, idk. by the way, all the answers for the quiz are c (option 3)
+						<div class="infounwrapcontent">
+							<p>Turkey / Deer / Coyote / Raccoons can be found on campus and a lot of times they’re near the roads.</p>
+							</div>
 					</div>
 				</div>
 
@@ -88,7 +97,9 @@
 					<img src="./imgs/placeholder-01.png">
 					HAY
 					<div class="infounwrap">
-						more info or something, idk
+						<div class="infounwrapcontent">
+							more info or something, idk
+						</div>
 					</div>
 				</div>
 
@@ -96,13 +107,132 @@
 					<img src="./imgs/placeholder-01.png">
 					HAY
 					<div class="infounwrap">
-						more info or something, idk
+						<div class="infounwrapcontent">
+							more info or something, idk
+						</div>
 					</div>
+				</div>
+			</div> 
+			<!-- end of tier 1 -->
+
+			<div id="tier2">
+				<div id="t1i6" class="infowrapper">
+						<img src="./imgs/placeholder-01.png">
+						HAY
+						<div class="infounwrap">
+							<div class="infounwrapcontent">
+								more info or something, idk
+							</div>
+						</div>
+				</div>
+				
+				<div id="t1i7" class="infowrapper">
+						<img src="./imgs/placeholder-01.png">
+						HAY
+						<div class="infounwrap">
+							<div class="infounwrapcontent">
+								more info or something, idk
+							</div>
+						</div>
+				</div>
+
+				<div id="t1i8" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						<div class="infounwrapcontent">
+							more info or something, idk
+						</div>
+					</div>
+				</div>
+
+				<div id="t1i9" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						<div class="infounwrapcontent">
+							more info or something, idk
+						</div>
+					</div>
+				</div>
+
+				<div id="t1i10" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						<div class="infounwrapcontent">
+							more info or something, idk
+						</div>
+					</div>
+				</div>
+
+				<div id="t1i11" class="infowrapper">
+						<img src="./imgs/placeholder-01.png">
+						HAY
+						<div class="infounwrap">
+							<div class="infounwrapcontent">
+								more info or something, idk
+							</div>
+						</div>
+				</div>
+			
+
+				<div id="t1i12" class="infowrapper">
+							<img src="./imgs/placeholder-01.png">
+							HAY
+							<div class="infounwrap">
+								<div class="infounwrapcontent">
+									more info or something, idk
+								</div>
+							</div>
+				</div>
+					
+				<div id="t1i13" class="infowrapper">
+							<img src="./imgs/placeholder-01.png">
+							HAY
+							<div class="infounwrap">
+								<div class="infounwrapcontent">
+									more info or something, idk
+								</div>
+							</div>
+				</div>
+
+				<div id="t1i14" class="infowrapper">
+							<img src="./imgs/placeholder-01.png">
+							HAY
+							<div class="infounwrap">
+								<div class="infounwrapcontent">
+									more info or something, idk
+								</div>
+							</div>
+				</div>
+				
+				<div id="t1i7" class="infowrapper">
+					<img src="./imgs/placeholder-01.png">
+					HAY
+					<div class="infounwrap">
+						<div class="infounwrapcontent">
+							more info or something, idk
+						</div>
+					</div>
+				</div>
+
+				<div id="t1i7" class="infowrapper">
+						<img src="./imgs/placeholder-01.png">
+						HAY
+						<div class="infounwrap">
+							<div class="infounwrapcontent">
+								more info or something, idk
+							</div>
+						</div>
 				</div>
 			</div>
 
-			<div class="slugstick">
-				<img src="./imgs/sluggy.png">
+
+				<div class="slugstick">
+					<img src="./imgs/sluggy.png">
+				</div>
+
 			</div>
 
 	</main>
