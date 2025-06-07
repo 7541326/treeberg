@@ -72,41 +72,15 @@ html{
 
 /* headings for the tiers */
 
-#h1, h2{
+.tier-heading{
     color:rgb(65, 41, 10);
     text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;;
     font-family: 'Courier New';
     font-size: larger;
     font-weight: bolder;
     display: block;
     padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
-    /* we can make  the background color a different tint of the tree/dirt color*/
-}
 
-
-#h3, h4, h5, h6{
-    color:rgb(0, 0, 0);
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;;
-    font-family: 'Courier New';
-    font-size: larger;
-    font-weight: bolder;
-    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
-    /* we can make  the background color a different tint of the tree/dirt color*/
-}
-
-#h7, #h8{
-    color:rgb(0, 0, 0);
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;;
-    font-family: 'Courier New';
-    font-size: larger;
-    font-weight: bolder;
-    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
     /* we can make  the background color a different tint of the tree/dirt color*/
 }
 
@@ -124,14 +98,7 @@ html{
 
 #tier2 {
     display: grid;
-    grid-template-rows: repeat(9, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier3 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
+    grid-template-rows: repeat(11, 100px);
     grid-template-columns: repeat(10,1fr);
     position: relative;
 }
@@ -187,7 +154,10 @@ html{
 /* info wrapper for content bubbles */
 
 .infowrapper {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color:rgb(181, 216, 239) ;
     overflow: auto;
     font-family:'Courier New';
@@ -301,44 +271,44 @@ html{
 /* start of tier 2 */
 
 #t2i1{
-    grid-row: 1/ span 1;
+    grid-row: 2/ span 1;
     grid-column: 7/ span 2;
 }
 
 #t2i2{
-    grid-row: 2/ span 1;
+    grid-row: 3/ span 1;
     grid-column: 2/ span 2;
 
 }
 
 #t2i3{
-    grid-row: 3/ span 1;
+    grid-row: 4/ span 1;
     grid-column: 5/ span 2;
 }
 
 #t2i4{
-    grid-row: 5/ span 1;
+    grid-row: 6/ span 1;
     grid-column: 2/ span 2;
 
 }
 
 #t2i5{
-    grid-row: 6/span 1;
+    grid-row: 7/span 1;
     grid-column: 8/ span 2;
 }
 
 #t2i6 {
-    grid-row: 7/ span 1;
+    grid-row: 8/ span 1;
     grid-column: 3/ span 2;
 }
 
 #t2i7 {
-    grid-row: 8/ span 1;
+    grid-row: 9/ span 1;
     grid-column: 8/ span 2;
 }
 
 #t2i8 {
-    grid-row: 9/ span 1;
+    grid-row: 10/ span 1;
     grid-column: 4/ span 2;
 }
 
