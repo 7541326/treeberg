@@ -80,7 +80,11 @@ html{
     font-family: 'Courier New';
     font-size: larger;
     font-weight: bolder;
+    display: block;
+    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
+    /* we can make  the background color a different tint of the tree/dirt color*/
 }
+
 
 #h3, h4, h5, h6{
     color:rgb(0, 0, 0);
@@ -90,6 +94,8 @@ html{
     font-family: 'Courier New';
     font-size: larger;
     font-weight: bolder;
+    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
+    /* we can make  the background color a different tint of the tree/dirt color*/
 }
 
 #h7, #h8{
@@ -100,6 +106,8 @@ html{
     font-family: 'Courier New';
     font-size: larger;
     font-weight: bolder;
+    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
+    /* we can make  the background color a different tint of the tree/dirt color*/
 }
 
 /* end of headings for tiers */
