@@ -82,8 +82,18 @@ html{
     font-weight: bolder;
 }
 
-h3, h4, h5, h6, h7{
-    color:rgb(207, 155, 86);
+#h3, h4, h5, h6{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;;
+    font-family: 'Courier New';
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#h7, #h8{
+    color:rgb(0, 0, 0);
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;;
@@ -117,6 +127,51 @@ h3, h4, h5, h6, h7{
     grid-template-columns: repeat(10,1fr);
     position: relative;
 }
+
+#tier3 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier4 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier5 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier6 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier7 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier8 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10, 1fr);
+    position: relative;
+}
+
+
+
 
 /* end of tier grids */
 
