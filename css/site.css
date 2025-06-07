@@ -70,87 +70,6 @@ html{
     width: 150px;
 }
 
-/* headings for the tiers */
-
-.tier-heading{
-    color:rgb(65, 41, 10);
-    text-align: center;
-    font-family: 'Courier New';
-    font-size: larger;
-    font-weight: bolder;
-    display: block;
-    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
-
-    /* we can make  the background color a different tint of the tree/dirt color*/
-}
-
-/* end of headings for tiers */
-
-
-/* tier grids */
-
-#tier1{
-     display: grid;
-    grid-template-rows: repeat(6, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier2 {
-    display: grid;
-    grid-template-rows: repeat(11, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier3 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier4 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier5 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier6 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier7 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
-    grid-template-columns: repeat(10,1fr);
-    position: relative;
-}
-
-#tier8 {
-    display: grid;
-    grid-template-rows: repeat(13, 100px);
-    grid-template-columns: repeat(10, 1fr);
-    position: relative;
-}
-
-
-
-
-/* end of tier grids */
-
-
 /* info wrapper for content bubbles */
 
 .infowrapper {
@@ -238,6 +157,84 @@ html{
 /* grid placement stuff */
 /* make sure to put any new css ABOVE this just so all this stuff is at the bottom */
 
+/* headings for the tiers */
+
+.tier-heading{
+    color:rgb(65, 41, 10);
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: larger;
+    font-weight: bolder;
+    display: block;
+    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
+
+    /* we can make  the background color a different tint of the tree/dirt color*/
+}
+
+/* end of headings for tiers */
+
+
+/* tier grids */
+
+#tier1{
+     display: grid;
+    grid-template-rows: repeat(6, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier2 {
+    display: grid;
+    grid-template-rows: repeat(11, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier3 {
+    display: grid;
+    grid-template-rows: repeat(14, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier4 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier5 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier6 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier7 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10,1fr);
+    position: relative;
+}
+
+#tier8 {
+    display: grid;
+    grid-template-rows: repeat(13, 100px);
+    grid-template-columns: repeat(10, 1fr);
+    position: relative;
+}
+
+/* end of tier grids */
+
+
 /* start of tier 1 */
 
 #tli1 {
@@ -317,18 +314,58 @@ html{
 
 /* start of tier 3 */
 #t3i1{
-    grid-row: 1/ span 1;
-    grid-column: 2/ span 2;
+    grid-row: 2/ span 1;
+    grid-column: 8/ span 2;
 }
 
 #t3i2{
-    grid-row: 2/ span 1;
-    grid-column: 9/ span 2;
+    grid-row: 3/ span 1;
+    grid-column: 3/ span 2;
 }
 
 #t3i3{
-    grid-row: 3/ span 1;
+    grid-row: 4/ span 1;
+    grid-column: 7/ span 2;
+}
+
+#t3i4{
+    grid-row: 6/span 1;
+    grid-column: 2/span 2;
+}
+
+#t3i5{
+    grid-row: 7/ span 1;
+    grid-column: 8/ span 2;
+}
+
+#t3i6{
+    grid-row: 8/span 1;
+    grid-column: 4/ span 2;
+}
+
+#t3i7{
+    grid-row:9/ span 1;
+    grid-column: 7/ span 2;
+}
+
+#t3i8{
+    grid-row: 10/span 1;
+    grid-column: 2/ span 2;
+}
+
+#t3i9{
+    grid-row: 11/span 1;
+    grid-column: 6/ span 2;
+}
+
+#t3i10{
+    grid-row: 12/span 1;
     grid-column: 3/ span 2;
+}
+
+#t3i11{
+    grid-row: 13/span 1;
+    grid-column: 8/ span 2;
 }
 
 /* end of tier 3 */
