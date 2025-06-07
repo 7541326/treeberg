@@ -3,7 +3,7 @@
 }
 
 html{
-    background-color: rgb(115, 186, 221);
+    background-color: rgb(232, 240, 142);
 }
 
 #iceberg {
@@ -63,12 +63,17 @@ html{
 
 .infowrapper {
     display: none;
-    background-color: white;
+    background-color:rgb(181, 216, 239) ;
     overflow: auto;
+    font-family:'Courier New';
+    font-size: medium;
+    font-weight: bold;
+    color:rgb(101, 150, 90);
+   
 }
 
 .infowrapper:hover {
-    border: solid 2px red;
+    border: dotted 2px rgb(0, 8, 255);
 }
 
 .infounwrap {
@@ -85,13 +90,14 @@ html{
 }
 
 .infounwrapcontent {
-    background-color: #fefefe;
+
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-}
+    background-color:rgb(232, 240, 142); ;
 
+}
 
 /* quiz stuff */
 
@@ -111,6 +117,20 @@ html{
     display: none;
 }
 
+#bannerStart{
+    border-radius: 12px;
+    padding: 12px 28px;
+    background-color: rgb(128, 171, 231);
+    font-family:'Courier New';
+}
+
+#colleges{
+    width: 500px;
+}
+
+#figures{ 
+    width: 500px;
+}
 /* grid placement stuff */
 /* make sure to put any new css ABOVE this just so all this stuff is at the bottom */
 
@@ -155,6 +175,8 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    width: 600px;
+    color: rgb(255, 255, 255);
+    width: 800px;
+    font-family:'Courier New';
+
 }
