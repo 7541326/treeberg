@@ -1,6 +1,19 @@
 // script.js - treeberg functionality
 // may 2025
 
+//start of buttons scrolling to bottom and top
+
+const scrollBottom = document.getElementById("scroll-to-bottom");
+
+scrollBottom.addEventListener('click', () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    })
+})
+
+//end of scrolling buttons
+
 // variables
 const $tierItems = $(".infowrapper")
 const quizQs = [

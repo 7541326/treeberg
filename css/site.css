@@ -70,6 +70,24 @@ html{
     width: 150px;
 }
 
+/* buttons for scrolling to top and bottom */
+
+#scroll-to-bottom{
+    background-color: rgb(77, 41, 8);
+    color: white;
+    cursor: pointer;
+    padding: 1%;
+    font-size: 18px;
+    border: none;
+}
+
+#scroll-to-bottom:hover{
+    background-color: rgb(212, 142, 62);
+    color: black;
+}
+
+/* end of button content */
+
 /* info wrapper for content bubbles */
 
 .infowrapper {
