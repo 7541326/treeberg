@@ -28,7 +28,6 @@
 }
 
 html{
-    background-color: rgb(232, 240, 142);
 }
 
 #iceberg{
@@ -80,9 +79,9 @@ html{
     background-color:rgb(181, 216, 239) ;
     overflow: auto;
     font-family:'Courier New';
-    font-size: medium;
+    font-size: larger;
     font-weight: bold;
-    color:rgb(80, 131, 69);
+    color:rgb(43, 112, 28);
     border-radius: 7px;
 }
 
