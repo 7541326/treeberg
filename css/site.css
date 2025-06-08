@@ -500,4 +500,9 @@ html{
     grid-column: 8/ span 2;
 }
 
+#t5i12{
+    grid-row: 13/ span 1;
+    grid-column: 1/ span 2;
+}
+
 /* end of tier 5 */
