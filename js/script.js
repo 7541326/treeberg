@@ -1,8 +1,18 @@
 // script.js - treeberg functionality
 // may 2025
+// probably need to organize this better at some point idk
 
-//start of buttons scrolling to bottom and top
 
+// sound var
+var sound = new Howl({
+  src: ['./sounds/forest-ambience-26617.mp3'],
+  loop: true,
+  volume: 0.5,
+});
+
+
+// --------------------------------------------
+// start of buttons scrolling to bottom and top
 const scrollBottom = document.getElementById("scroll-to-bottom");
 
 scrollBottom.addEventListener('click', () => {
@@ -12,8 +22,9 @@ scrollBottom.addEventListener('click', () => {
     })
 })
 
-//end of scrolling buttons
+//---------------------------------------------
 
+// quiz stuff
 // variables
 const $tierItems = $(".infowrapper")
 const quizQs = [
@@ -89,6 +100,8 @@ function quizNext() {
     }
 }
 
+
+// ---------------------------------------------
 // buttons
 $("#bannerStart").click(function () {
     console.log("clicked");
@@ -99,7 +112,14 @@ $("#bannerStart").click(function () {
     $("#treecontainer").slideDown(1000);
     $(".slugstick").delay(1000).slideDown(1000);
     $tierItems.delay(1500).fadeIn(1000);
+    
+    // load particles
+    particlesJS.load('particles-js', 'experiments/particle/js/particles.json', function() {
+    console.log('callback - particles.js config loaded');});
 
+    // play sound
+    sound.play();
+    console.log("playing");
 });
 
 $("#quizSubmit").click(function () {
@@ -126,3 +146,26 @@ $tierItems.click(function () {
         $(this).children(".infounwrap").slideUp();
     }
 });
+
+
+// -------------------------------------------
+
+// scrolling
+// init controller
+var controller = new ScrollMagic.Controller();
+
+// adding the things
+// https://scrollmagic.io/examples/basic/reveal_on_scroll.html
+var revealElements = document.getElementsByClassName("infowrapper");
+	for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+		new ScrollMagic.Scene({
+            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+	        offset: 50,										// start a little later
+			triggerHook: 0.9,
+	})
+	.setClassToggle(revealElements[i], "visible") // add class toggle
+	// .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+	.addTo(controller);
+}
+
+
