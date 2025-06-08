@@ -500,9 +500,167 @@ html{
     grid-column: 8/ span 2;
 }
 
-#t5i12{
-    grid-row: 13/ span 1;
-    grid-column: 1/ span 2;
+/* end of tier 5 */
+
+/* start of tier 6 */
+
+#t6i1{
+    grid-row: 2/ span 1;
+    grid-column: 7/ span 2;
 }
 
-/* end of tier 5 */
+#t6i2{
+    grid-row: 3/ span 1;
+    grid-column: 2/ span 2;
+
+}
+
+#t6i3{
+    grid-row: 4/ span 1;
+    grid-column: 5/ span 2;
+}
+
+#t6i4{
+    grid-row: 6/ span 1;
+    grid-column: 2/ span 2;
+
+}
+
+#t6i5{
+    grid-row: 7/span 1;
+    grid-column: 8/ span 2;
+}
+
+#t6i6 {
+    grid-row: 8/ span 1;
+    grid-column: 3/ span 2;
+}
+
+#t6i7 {
+    grid-row: 9/ span 1;
+    grid-column: 8/ span 2;
+}
+
+#t6i8 {
+    grid-row: 10/ span 1;
+    grid-column: 2/ span 2;
+}
+
+#t6i9 {
+    grid-row: 11/ span 1;
+    grid-column: 7/ span 2;
+}
+
+#t6i10 {
+    grid-row: 12/ span 1;
+    grid-column: 4/ span 2;
+}
+
+/* end of tier 6 */
+
+/* start of tier 7 */
+
+#t7i1{
+    grid-row: 2/ span 1;
+    grid-column: 7/ span 2;
+}
+
+#t7i2{
+    grid-row: 3/ span 1;
+    grid-column: 2/ span 2;
+
+}
+
+#t7i3{
+    grid-row: 4/ span 1;
+    grid-column: 5/ span 2;
+}
+
+#t7i4{
+    grid-row: 6/ span 1;
+    grid-column: 2/ span 2;
+
+}
+
+#t7i5{
+    grid-row: 7/span 1;
+    grid-column: 8/ span 2;
+}
+
+#t7i6 {
+    grid-row: 8/ span 1;
+    grid-column: 3/ span 2;
+}
+
+#t7i7 {
+    grid-row: 9/ span 1;
+    grid-column: 8/ span 2;
+}
+
+#t7i8 {
+    grid-row: 10/ span 1;
+    grid-column: 2/ span 2;
+}
+
+#t7i9 {
+    grid-row: 11/ span 1;
+    grid-column: 7/ span 2;
+}
+
+#t7i10 {
+    grid-row: 12/ span 1;
+    grid-column: 4/ span 2;
+}
+
+#t7i11 {
+    grid-row: 13 span 1;
+    grid-column: 4/ span 2;
+}
+
+/* end of tier 7 */
+
+/* start of tier 8 */
+
+#t8i1{
+    grid-row: 2/ span 1;
+    grid-column: 8/ span 2;
+}
+
+#t8i2{
+    grid-row: 3/ span 1;
+    grid-column: 2/ span 2;
+
+}
+
+#t8i3{
+    grid-row: 4/ span 1;
+    grid-column: 5/ span 2;
+}
+
+#t8i4{
+    grid-row: 6/ span 1;
+    grid-column: 2/ span 2;
+
+}
+
+#t8i5{
+    grid-row: 7/span 1;
+    grid-column: 8/ span 2;
+}
+
+#t8i6 {
+    grid-row: 8/ span 1;
+    grid-column: 5/ span 2;
+}
+
+#t8i7 {
+    grid-row: 9/ span 1;
+    grid-column: 8/ span 2;
+}
+
+#t8i8 {
+    grid-row: 10/ span 1;
+    grid-column: 2/ span 2;
+}
+
+/*end of tier 8
