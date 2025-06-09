@@ -1,3 +1,21 @@
+/* color variables */
+:root {
+    --bg: rgb(128, 171, 231);
+    --secbg: rgb(190, 209, 211);
+    --tertbg: rgb(234, 230, 205);
+    --activebg: rgb(116, 62, 21);
+    --font: rgb(9, 16, 10);
+    --secfont: rgb(255,255,255);
+}
+
+* {
+    cursor: url("../imgs/Cursor_Image_.png") 5 0, default;
+}
+
+html{
+    background-color: var(--bg);
+}
+
 /*banner / our homepage */
 .hero-image{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5)), rgba (0, 0, 0, 0.5);
@@ -15,21 +33,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
+    color: var(--secfont);
     width: 800px;
     font-family:'Courier New';
 
 } 
 
 /* end of banner css */
-
-* {
-    cursor: url("../imgs/Cursor_Image_.png") 5 0, default;
-}
-
-html{
-    background-color: rgb(133, 241, 255);
-}
 
 #iceberg{
     display:none;
@@ -71,10 +81,11 @@ html{
 }
 
 /* buttons for scrolling to top and bottom */
+/* and expandquiz button */
 
-#scroll-to-bottom{
-    background-color: rgb(77, 41, 8);
-    color: white;
+button, #scroll-to-bottom, #quizExpand {
+    background-color: var(--activebg);
+    color: var(--secfont);
     cursor: pointer;
     padding: 1%;
     font-size: 18px;
@@ -84,10 +95,11 @@ html{
     font-size: larger;
 }
 
-#scroll-to-bottom:hover{
-    background-color: rgb(212, 142, 62);
-    color: black;
+button:hover, #scroll-to-bottom:hover, #quizExpand:hover {
+    background-color: var(--tertbg);
+    color: var(--font);
 }
+
 
 /* end of button content */
 
@@ -100,12 +112,12 @@ html{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color:rgb(181, 216, 239) ;
+    background-color:var(--secbg) ;
     overflow: none;
     font-family:'Courier New';
     font-size: larger;
     font-weight: bold;
-    color:rgb(43, 112, 28);
+    color: var(--font);
     border-radius: 7px;
     padding-top:50px;
     padding-bottom:50px;
@@ -123,7 +135,9 @@ html{
 }
 
 .infowrapper:hover {
-    border: dotted 2px rgb(0, 8, 255);
+    /* border: dotted 2px rgb(0, 8, 255); */
+    background-color:var(--tertbg) ;
+
 }
 
 .infowrapper.visible {
@@ -156,7 +170,8 @@ html{
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-    background-color:rgb(232, 240, 142); ;
+    background-color: var(--tertbg);
+    border-radius: 5px;
 
 }
 
@@ -169,7 +184,7 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #7acde7;
+    background-color: var(--bg);
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,13 +203,76 @@ html{
 /* end of content bubbles */
 
 /* quiz stuff */
+#quizcontainer {
+    margin: 0 auto;
+    height: 98vh;
+    position: relative;
+    text-align: center;
+}
 
 #quiz {
-    display:none;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+    padding: 10px;
+    max-width: 90%;
+    font-size: 20px;
+}
+
+#quizQ {
+    padding: 10px;
+    background-color: var(--tertbg);
+    border-radius: 5px;
+}
+
+#quizA {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+    /* background-color: var(--tertbg); */
+}
+
+.quizALabel {
+    padding: 3px;
+    background-color: var(--tertbg);
+    border-radius: 5px;
+    flex: 1 1 0px;
+    text-align: center;
+    display: flex;
+}
+
+/* https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label */
+#quizA input[type="radio"] {
+  display: none;
+}
+
+#quizA label {
+  display: inline-block;
+  /* background-color: ; */
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 16px;
+  /* cursor: pointer; */
+}
+
+#quizA label:hover {
+  background-color: var(--secbg);
+}
+
+#quizA input[type="radio"]:checked+label {
+  background-color: var(--activebg);
+  color: var(--secfont);
 }
 
 #quizSubmit {
-    display:none;
+    display: none;
 }
 
 #quizResults {
@@ -205,19 +283,15 @@ html{
     display: none;
 }
 
-#quizExpand {
-    display: block;
-    padding: 1%;
-    color: white;
-    background-color: #47330c;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
+.center {
+    text-align: center;
 }
+
 
 #bannerStart{
     border-radius: 12px;
     padding: 12px 28px;
-    background-color: rgb(128, 171, 231);
+    background-color: var(--bg);
     font-family:'Courier New';
 }
 
@@ -240,13 +314,13 @@ html{
 /* headings for the tiers */
 
 .tier-heading{
-    color:rgb(65, 41, 10);
+    color: var(--font);
     text-align: center;
     font-family: 'Courier New';
     font-size: larger;
     font-weight: bolder;
     display: block;
-    padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
+    padding:5px; margin-left: 500px; margin-right: 500px; background-color: var(--secbg);
     border-radius: 7px;
 
     /* we can make  the background color a different tint of the tree/dirt color*/

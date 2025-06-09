@@ -28,6 +28,7 @@ scrollBottom.addEventListener('click', () => {
 // variables
 const $tierItems = $(".infowrapper")
 const quizQs = [
+    // please remember that the index starts with "0", not "1"
   {
     question: "What is the official mascot of UC Santa Cruz?",
     answers: [
@@ -36,7 +37,7 @@ const quizQs = [
         "Grizly Bear",
         "Frog"
     ],
-    correct: 2 // Fixed index
+    correct: 1 // index for banana slug
   },
   {
     question: "Which Cafe can you get a free meal?",
@@ -46,7 +47,7 @@ const quizQs = [
         "Global Village Cafe",
         "Stevenson Cafe"
     ],
-    correct: 2
+    correct: 1 // index for cowell cafe
   },
   {
     question: "What is the theme for Cowell College?",
@@ -56,7 +57,7 @@ const quizQs = [
         "Power and Representation",
         "How am I supposed to know?"
     ],
-    correct: 2 // Fixed index
+    correct: 1 // index for pursuit of truth
   },
 ]
 let currentQ = 0;
@@ -70,10 +71,10 @@ function quizStart(num) {
     for (let i in quizQs[num].answers) {
         $("#quizA").append(`
             <input type="radio" name="quiz" value="${i}" id="quizA${i}">
-            <label for="quizA${i}">${quizQs[num].answers[i]}</label><br>
+            <label for="quizA${i}" class="quizALabel"><p>${quizQs[num].answers[i]}</p></label>
         `);
     }
-    $("#quizSubmit").css("display", "block");
+    $("#quizSubmit").css("display", "inline");
 }
 
 function quizCheck(num) {
@@ -85,7 +86,8 @@ function quizCheck(num) {
 }
 
 function quizNext() {
-    console.log("clicked")
+    console.log("clicked");
+    console.log(score, currentQ);
     if (currentQ < quizQs.length - 1) {
         currentQ++;
         quizStart(currentQ);
@@ -119,7 +121,8 @@ $("#bannerStart").click(function () {
 
 
 $("#quizExpand").click(function() {
-    console.log("quiz time!")
+    console.log("quiz time!");
+    console.log(score, currentQ);
     $("#treecontainer").slideUp();
     $("#quiz").delay(1000).slideDown();
     quizStart(currentQ);
@@ -140,6 +143,16 @@ $("#quizExit").click(function () {
     $("#treecontainer").slideDown(1000);
     $(".slugstick").delay(1000).slideDown(1000);
     $tierItems.delay(1500).fadeIn(1000);
+    // reshow quiz divs 
+    $("#quizQ").delay(2000).slideDown();
+    $("#quizA").delay(2000).slideDown();
+    $("#quizSubmit").delay(2000).slideDown();
+    $("#quizResults").delay(2000).slideUp();
+    $("#quizExit").delay(2000).slideUp();
+    currentQ = 0;
+    score = 0;
+    console.log(score, currentQ);
+
 });
 
 // show or hide info when clicking tier item
