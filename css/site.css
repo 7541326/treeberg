@@ -190,11 +190,11 @@ html{
 /* quiz stuff */
 
 #quiz {
-    display: none;
+    display:none;
 }
 
 #quizSubmit {
-    display: none;
+    display:none;
 }
 
 #quizResults {
@@ -203,6 +203,15 @@ html{
 
 #quizExit {
     display: none;
+}
+
+#quizExpand {
+    display: block;
+    padding: 1%;
+    color: white;
+    background-color: #47330c;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
 }
 
 #bannerStart{
