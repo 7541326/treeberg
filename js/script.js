@@ -13,6 +13,7 @@ var sound = new Howl({
 // elements
 const scrollBottom = $("#scroll-to-bottom");
 const $tierItems = $(".infowrapper");
+let mybutton = document.getElementById("scroll-to-top");
 
 // scroll initialize
 var controller = new ScrollMagic.Controller();
@@ -199,6 +200,13 @@ function quizNext() {
 // ------------------------------------
 
 // BUTTONS ----------------------------
+// mute botton 
+document.getElementById("soundToggle").addEventListener("click", function () {
+    sound.mute(!sound._muted);
+    this.textContent = sound._muted ? "Unmute Sound" : "Mute Sound";
+    console.log("muted/unmuted");
+});
+
 // scroll to bottom
 scrollBottom.click(function() {
     window.scrollTo({
@@ -208,8 +216,6 @@ scrollBottom.click(function() {
 });
 
 //scroll to top
-let mybutton = document.getElementById("scroll-to-top");
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -311,14 +317,3 @@ var revealElements = document.getElementsByClassName("infowrapper");
 	// .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
 	.addTo(controller);
 }
-// sound loops 
-var sound = new Howl({
-    src: ['./sounds/forest-ambience-26617.mp3'],
-    loop: true,
-    volume: 0.5,
-  });
-// mute botton 
-  document.getElementById("soundToggle").addEventListener("click", function () {
-    sound.mute(!sound._muted);
-    this.textContent = sound._muted ? "Unmute Sound" : "Mute Sound";
-  });
