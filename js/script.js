@@ -60,7 +60,7 @@ let quizQs = [
     correct: 1 //index for redwood trees
   },
   {
-    question: "How many residential colleges are there?",
+    question: "How many residential colleges are there?",        //5th Question
     answers: [
         "1",
         "2235",
@@ -111,7 +111,7 @@ let quizQs = [
     correct: 1 //index for the 2nd answer 
   },
   {
-    question:"Where was the Sammy shrine located?",
+    question:"Where was the Sammy shrine located?",          //10th Question
     answers: [
         
         "Stevenson Dorms",
@@ -165,7 +165,7 @@ function quizCheck(num) {
     let message = "";
     if (selectedA == correctA) {
         score++;
-        message = "✅ Correct!";
+        message = "✅ Correct! Nice job! I see you've thoroughly read through our Treeberg :)";
     } else {
         let correctAnswerText = randomizedQs[num].answers[correctA];
         message = `❌ Wrong! Better luck next time!`;
