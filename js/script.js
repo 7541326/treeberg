@@ -313,12 +313,16 @@ var revealElements = document.getElementsByClassName("infowrapper");
 }
 
 
-// sound button
-function toggleSound() {
-    const audio = document.getElementById("myAudio");
-    const btn = event.target;
-    audio.muted = !audio.muted;
-    btn.innerText = audio.muted ? "Unmute" : "Mute";
-  } 
-
+// Load looping forest ambience using Howler.js
+const backgroundSound = new Howl({
+    src: ['sounds/forest-ambience-26617.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.5
+  });
   
+  // Toggle mute/unmute with button
+  document.getElementById("soundToggle").addEventListener("click", function () {
+    backgroundSound.mute(!backgroundSound._muted);
+    this.textContent = backgroundSound._muted ? "Unmute Sound" : "Mute Sound";
+  });
