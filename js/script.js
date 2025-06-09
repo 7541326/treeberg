@@ -311,13 +311,13 @@ var revealElements = document.getElementsByClassName("infowrapper");
 	// .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
 	.addTo(controller);
 }
-
+// sound loops 
 var sound = new Howl({
     src: ['./sounds/forest-ambience-26617.mp3'],
     loop: true,
     volume: 0.5,
   });
-    
+// mute botton 
   document.getElementById("soundToggle").addEventListener("click", function () {
     sound.mute(!sound._muted);
     this.textContent = sound._muted ? "Unmute Sound" : "Mute Sound";
