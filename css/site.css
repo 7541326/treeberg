@@ -79,6 +79,9 @@ html{
     padding: 1%;
     font-size: 18px;
     border: none;
+    border-radius: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
 }
 
 #scroll-to-bottom:hover{
@@ -235,6 +238,7 @@ html{
     font-weight: bolder;
     display: block;
     padding:5px; margin-left: 500px; margin-right: 500px; background-color: white;
+    border-radius: 7px;
 
     /* we can make  the background color a different tint of the tree/dirt color*/
 }

@@ -80,11 +80,14 @@ function quizNext() {
 $("#bannerStart").click(function () {
     console.log("clicked");
     $("#abovetree").slideUp();
-    $("#quiz").delay(1000).slideDown();
-    quizStart(currentQ);
-    
-
 });
+
+$("#quizExpand").click(function() {
+    console.log("quiz time!")
+    $("#treecontainer").slideUp(1000);
+    $("#quiz").delay(1000).slideDown(1000);
+    quizStart(currentQ);
+})
 
 $("#quizSubmit").click(function () {
     if (!$('input[name="quiz"]:checked').val()) {

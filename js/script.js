@@ -1,7 +1,5 @@
 // script.js - treeberg functionality
 // may 2025
-// probably need to organize this better at some point idk
-
 
 // sound var
 var sound = new Howl({
@@ -13,6 +11,7 @@ var sound = new Howl({
 
 // --------------------------------------------
 // start of buttons scrolling to bottom and top
+
 const scrollBottom = document.getElementById("scroll-to-bottom");
 
 scrollBottom.addEventListener('click', () => {
@@ -22,9 +21,10 @@ scrollBottom.addEventListener('click', () => {
     })
 })
 
-//---------------------------------------------
+//end of scrolling buttons
 
-// quiz stuff
+
+
 // variables
 const $tierItems = $(".infowrapper")
 const quizQs = [
@@ -99,21 +99,16 @@ function quizNext() {
         $("#quizExit").slideDown();
     }
 }
-
-
 // ---------------------------------------------
 // buttons
 $("#bannerStart").click(function () {
     console.log("clicked");
     $("#abovetree").slideUp();
-    // $("#quiz").delay(1000).slideDown();
-    // quizStart(currentQ);
-    
     $("#treecontainer").slideDown(1000);
     $(".slugstick").delay(1000).slideDown(1000);
     $tierItems.delay(1500).fadeIn(1000);
-    
-    // load particles
+
+  // load particles
     particlesJS.load('particles-js', 'experiments/particle/js/particles.json', function() {
     console.log('callback - particles.js config loaded');});
 
@@ -121,6 +116,15 @@ $("#bannerStart").click(function () {
     sound.play();
     console.log("playing");
 });
+
+
+$("#quizExpand").click(function() {
+    console.log("quiz time!")
+    $("#treecontainer").slideUp();
+    $("#quiz").delay(1000).slideDown();
+    quizStart(currentQ);
+})
+
 
 $("#quizSubmit").click(function () {
     if (!$('input[name="quiz"]:checked').val()) {
@@ -147,7 +151,6 @@ $tierItems.click(function () {
     }
 });
 
-
 // -------------------------------------------
 
 // scrolling
@@ -167,5 +170,3 @@ var revealElements = document.getElementsByClassName("infowrapper");
 	// .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
 	.addTo(controller);
 }
-
-
