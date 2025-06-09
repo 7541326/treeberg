@@ -216,6 +216,27 @@ let quizQs = [
     ],
     correct: 1//index for the 2nd answer
 
+  },
+  {
+    question:"Who is Samantha?",
+    answers: [
+        "The name of a tree on campus",
+        "Sammy the Slug alter-ego",
+        "A goat on campus",
+        "Sammy the Slug government name",
+    ],
+    correct: 1 //index for the 2nd answer 
+  },
+  {
+    question:"Where was the Sammy shrine located?",
+    answers: [
+        
+        "Stevenson Dorms",
+        "Quarry Amphitheater",
+        "Oakes Library",
+        "Porter Dorms",
+    ],
+    correct: 3//index for last option 
   }
 ]
 
