@@ -1,3 +1,4 @@
+//
 // script.js - treeberg functionality
 // may 2025
 
@@ -310,3 +311,14 @@ var revealElements = document.getElementsByClassName("infowrapper");
 	// .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
 	.addTo(controller);
 }
+
+
+// sound button
+function toggleSound() {
+    const audio = document.getElementById("myAudio");
+    const btn = event.target;
+    audio.muted = !audio.muted;
+    btn.innerText = audio.muted ? "Unmute" : "Mute";
+  } 
+
+  
