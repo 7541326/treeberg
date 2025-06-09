@@ -23,85 +23,9 @@ scrollBottom.addEventListener('click', () => {
 
 //end of scrolling buttons
 
-
-
 // variables
 const $tierItems = $(".infowrapper")
-const quizQs = [
-    // please remember that the index starts with "0", not "1"
-  {
-    question: "What is the official mascot of UC Santa Cruz?",
-    answers: [
-        "Sea Otter",
-        "Banana Slug",
-        "Grizly Bear",
-        "Frog"
-    ],
-    correct: 1 // index for banana slug
-  },
-  {
-    question: "Which Cafe can you get a free meal?",
-    answers: [
-        "Oakes Cafe",
-        "Cowell Cafe",
-        "Global Village Cafe",
-        "Stevenson Cafe"
-    ],
-    correct: 1 // index for cowell cafe
-  },
-  {
-    question: "What is the theme for Cowell College?",
-    answers: [
-        "Communicating Diversity for a just Society",
-        "The Pursuit of Truth in the Company of Friends",
-        "Power and Representation",
-        "How am I supposed to know?"
-    ],
-    correct: 1 // index for pursuit of truth
-  },
-]
-let currentQ = 0;
-let score = 0;
 
-// functions
-function quizStart(num) {
-    // prints currentQ of quizQs to relevant divs
-    $("#quizQ").html(`${quizQs[num].question}`);
-    $("#quizA").html(``);
-    for (let i in quizQs[num].answers) {
-        $("#quizA").append(`
-            <input type="radio" name="quiz" value="${i}" id="quizA${i}">
-            <label for="quizA${i}" class="quizALabel"><p>${quizQs[num].answers[i]}</p></label>
-        `);
-    }
-    $("#quizSubmit").css("display", "inline");
-}
-
-function quizCheck(num) {
-    let selectedA = $('input[name="quiz"]:checked').val();
-    console.log(selectedA);
-    if (selectedA == quizQs[num].correct) {
-        score++;
-    }
-}
-
-function quizNext() {
-    console.log("clicked");
-    console.log(score, currentQ);
-    if (currentQ < quizQs.length - 1) {
-        currentQ++;
-        quizStart(currentQ);
-    } else {
-        $("#quizResults").html(`Your score is: ${score}`);
-        console.log("slided");
-        $("#quizQ").slideUp();
-        $("#quizA").slideUp();
-        $("#quizSubmit").slideUp();
-        $("#quizResults").slideDown();
-        $("#quizExit").slideDown();
-    }
-}
-// ---------------------------------------------
 // buttons
 $("#bannerStart").click(function () {
     console.log("clicked");
@@ -125,6 +49,12 @@ $("#quizExpand").click(function() {
     console.log(score, currentQ);
     $("#treecontainer").slideUp();
     $("#quiz").delay(1000).slideDown();
+
+    currentQ = 0;
+    score = 0;
+    randomizedQs = shuffle([...quizQs]).slice(0, maxQuizQuestions); 
+    quizStart(currentQ);
+
     quizStart(currentQ);
 })
 
@@ -143,7 +73,10 @@ $("#quizExit").click(function () {
     $("#treecontainer").slideDown(1000);
     $(".slugstick").delay(1000).slideDown(1000);
     $tierItems.delay(1500).fadeIn(1000);
-    // reshow quiz divs 
+    
+    //hides feedback banner 
+     $("#quizFeedback").hide();
+
     $("#quizQ").delay(2000).slideDown();
     $("#quizA").delay(2000).slideDown();
     $("#quizSubmit").delay(2000).slideDown();
@@ -183,3 +116,169 @@ var revealElements = document.getElementsByClassName("infowrapper");
 	// .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
 	.addTo(controller);
 }
+
+
+
+
+//randomizing quiz questions
+// Needs to happen first before any of the other quiz elements
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i+1)); // random index
+        [array[i], array[j]] = [array[j], array[i]]; //swap elements
+    }
+    return array;
+}
+
+let randomizedQs = [];
+
+
+//start of implementing our quiz questions
+let quizQs = [
+    // please remember that the index starts with "0", not "1"
+  {
+    question: "What is the official mascot of UC Santa Cruz?",
+    answers: [
+        "Sea Otter",
+        "Banana Slug",
+        "Grizzly Bear",
+        "Frog"
+    ],
+    correct: 1 // index for banana slug
+  },
+  {
+    question: "Which Cafe can you get a free meal?",
+    answers: [
+        "Oakes Cafe",
+        "Cowell Cafe",
+        "Global Village Cafe",
+        "Stevenson Cafe"
+    ],
+    correct: 1 // index for cowell cafe
+  },
+  {
+    question: "What is the theme for Cowell College?",
+    answers: [
+        "Communicating Diversity for a just Society",
+        "The Pursuit of Truth in the Company of Friends",
+        "Power and Representation",
+        "How am I supposed to know?"
+    ],
+    correct: 1 // index for pursuit of truth
+  },
+  {
+    question: "What kind of trees surround the UCSC campus?",
+    answers: [
+        "Birch Trees",
+        "Redwood Trees",
+        "Mexican Plum Trees",
+        "Oak Trees"
+    ],
+    correct: 1 //index for redwood trees
+  },
+  {
+    question: "How many residential colleges are there?",
+    answers: [
+        "1",
+        "2235",
+        "69",
+        "10"
+    ],
+    correct: 3 //index for 10
+  },
+  {
+    question: "UCSC has a Coastal Campus. What subjects are taught there?",
+    answers:[
+        "Surfing",
+        "Water Related Kinesciology Classes",
+        "Coastal Conservation, Marine Biology, Ecology, Habitat Restoration, and Environmental Policy",
+        "Chemistry, Biology, Ecology, Geology"
+    ],
+    correct: 2 //index for the third answer
+  },
+  {
+    question: "What animals can be found around the UCSC campus?",
+    answers:[
+        "Foxes, Wolves, Deer, Squirrels",
+        "Mountain Lions, Ghosts, Elephants, Raccoons",
+        "Deer, Cows, Rabid Students",
+        "Turkey, Deer, Coyote, Racoons"
+    ],
+    correct: 3 //index for the last option
+  },
+  {
+    question:"Which statement is true?",
+    answers: [
+        "According to the California Database of UC Happiness, UC Santa Cruz has the lowest happiness ratings of them all.",
+        "Santa Cruz has one of the least afforadable rental markets in the nation.",
+        "The percentage of white people that attend UCSC is about 87%.",
+        "EVERYONE (yes including you too), love love LOVESSS TAPS.",
+    ],
+    correct: 1//index for the 2nd answer
+
+  }
+]
+
+//--------------------------------------------------------------
+let currentQ = 0;
+let score = 0;
+
+const maxQuizQuestions = 10;
+
+function quizStart(num) {
+    $("#quizQ").html(`${randomizedQs[num].question}`);
+    $("#quizA").html(``);
+
+    for (let i in randomizedQs[num].answers) {
+        $("#quizA").append(`
+            <input type="radio" name="quiz" value="${i}" id="quizA${i}" class="quiz-radio">
+            <label for="quizA${i}" class="quiz-label"><p>${randomizedQs[num].answers[i]}</p></label>
+        `);
+    }
+
+    $("#quizSubmit").css("display", "block");
+}
+
+function quizCheck(num) {
+    let selectedA = $('input[name="quiz"]:checked').val();
+    let correctA = randomizedQs[num].correct;
+
+    $(".quiz-radio").prop("disabled", true);
+    $("#quizSubmit").hide();  // Hide submit
+
+    let message = "";
+    if (selectedA == correctA) {
+        score++;
+        message = "✅ Correct!";
+    } else {
+        let correctAnswerText = randomizedQs[num].answers[correctA];
+        message = `❌ Wrong! Better luck next time!`;
+    }
+
+    // Show feedback
+    $("#quizFeedbackMsg").html(message);
+    $("#quizFeedback").slideDown();
+
+}
+
+
+function quizNext() {
+    console.log("clicked");
+    console.log("Score:", score, "Current Q:", currentQ);
+
+    if (currentQ < randomizedQs.length - 1) {
+        currentQ++;
+        quizStart(currentQ);
+    } else {
+        $("#quizResults").html(`Your score is: ${score}`);
+        $("#quizQ").slideUp();
+        $("#quizA").slideUp();
+        $("#quizSubmit").slideUp();
+        $("#quizResults").slideDown();
+        $("#quizExit").slideDown();
+    }
+}
+
+
+
+// ---------------------------------------------

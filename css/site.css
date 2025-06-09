@@ -287,6 +287,55 @@ button:hover, #scroll-to-bottom:hover, #quizExpand:hover {
     text-align: center;
 }
 
+.quiz-label {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fdfae4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.quiz-label.correct {
+    background-color: #a8f0a5;
+    border-color: #1d8027;
+}
+
+.quiz-label.wrong {
+    background-color: #f8b8b8;
+    border-color: #b32b2b;
+}
+
+.correct {
+    background-color: lightgreen;
+    border: 2 px solid green;
+}
+
+.wrong {
+    background-color: #ffcdd2;
+    border: 2px solid #c62828;
+}
+
+#quizFeedback {
+    background-color: #fffbe6;
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+#quizNextBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #77461c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
 
 #bannerStart{
     border-radius: 12px;
@@ -294,9 +343,6 @@ button:hover, #scroll-to-bottom:hover, #quizExpand:hover {
     background-color: var(--bg);
     font-family:'Courier New';
 }
-
-
-
 
 #colleges, #figures {
     width: 500px;
